@@ -1,6 +1,8 @@
 /*
- *  lab2exe_A.cpp
- *  ENSF 694 Lab 2 Exercise A
+ *  my_lab2exe_A.cpp
+ *  ENSF 694 Lab 2, part I, exercise A
+ *  Completed by: Jaskirat Singh
+ *  Submission date: July 10
  */
 
 int my_strlen(const char *s);
