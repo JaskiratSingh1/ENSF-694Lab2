@@ -11,6 +11,8 @@
 		2D922B0F2C376A7200C01801 /* my_lab2exe_A.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D922B0E2C376A7200C01801 /* my_lab2exe_A.cpp */; };
 		2D922B1C2C377BE300C01801 /* lab2exe_B.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D922B1B2C377BE300C01801 /* lab2exe_B.cpp */; };
 		2D922B292C3782F900C01801 /* lab2exe_C.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D922B282C3782F900C01801 /* lab2exe_C.cpp */; };
+		2D922B362C379F7500C01801 /* fibonacci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D922B352C379F7500C01801 /* fibonacci.cpp */; };
+		2D922B432C37A0B700C01801 /* Gnuplot example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D922B422C37A0B700C01801 /* Gnuplot example.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +61,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		2D922B2C2C379F5F00C01801 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		2D922B392C37A0A900C01801 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +91,10 @@
 		2D922B1B2C377BE300C01801 /* lab2exe_B.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab2exe_B.cpp; sourceTree = "<group>"; };
 		2D922B212C3782DB00C01801 /* part1ExerciseC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = part1ExerciseC; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D922B282C3782F900C01801 /* lab2exe_C.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab2exe_C.cpp; sourceTree = "<group>"; };
+		2D922B2E2C379F5F00C01801 /* part1ExerciseD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = part1ExerciseD; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D922B352C379F7500C01801 /* fibonacci.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fibonacci.cpp; sourceTree = "<group>"; };
+		2D922B3B2C37A0A900C01801 /* GNUplotExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GNUplotExample; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D922B422C37A0B700C01801 /* Gnuplot example.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Gnuplot example.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +133,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2D922B2B2C379F5F00C01801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D922B382C37A0A900C01801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,6 +157,8 @@
 				2D922B082C3769F300C01801 /* part1ExerciseAMyCode */,
 				2D922B152C377BC200C01801 /* part1ExerciseB */,
 				2D922B222C3782DB00C01801 /* part1ExerciseC */,
+				2D922B2F2C379F5F00C01801 /* part1ExerciseD */,
+				2D922B3C2C37A0A900C01801 /* GNUplotExample */,
 				2D922AED2C37694C00C01801 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,6 +171,8 @@
 				2D922B072C3769F300C01801 /* part1ExerciseAMyCode */,
 				2D922B142C377BC200C01801 /* part1ExerciseB */,
 				2D922B212C3782DB00C01801 /* part1ExerciseC */,
+				2D922B2E2C379F5F00C01801 /* part1ExerciseD */,
+				2D922B3B2C37A0A900C01801 /* GNUplotExample */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +207,22 @@
 				2D922B282C3782F900C01801 /* lab2exe_C.cpp */,
 			);
 			path = part1ExerciseC;
+			sourceTree = "<group>";
+		};
+		2D922B2F2C379F5F00C01801 /* part1ExerciseD */ = {
+			isa = PBXGroup;
+			children = (
+				2D922B352C379F7500C01801 /* fibonacci.cpp */,
+			);
+			path = part1ExerciseD;
+			sourceTree = "<group>";
+		};
+		2D922B3C2C37A0A900C01801 /* GNUplotExample */ = {
+			isa = PBXGroup;
+			children = (
+				2D922B422C37A0B700C01801 /* Gnuplot example.cpp */,
+			);
+			path = GNUplotExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +313,40 @@
 			productReference = 2D922B212C3782DB00C01801 /* part1ExerciseC */;
 			productType = "com.apple.product-type.tool";
 		};
+		2D922B2D2C379F5F00C01801 /* part1ExerciseD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D922B322C379F5F00C01801 /* Build configuration list for PBXNativeTarget "part1ExerciseD" */;
+			buildPhases = (
+				2D922B2A2C379F5F00C01801 /* Sources */,
+				2D922B2B2C379F5F00C01801 /* Frameworks */,
+				2D922B2C2C379F5F00C01801 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = part1ExerciseD;
+			productName = part1ExerciseD;
+			productReference = 2D922B2E2C379F5F00C01801 /* part1ExerciseD */;
+			productType = "com.apple.product-type.tool";
+		};
+		2D922B3A2C37A0A900C01801 /* GNUplotExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D922B3F2C37A0A900C01801 /* Build configuration list for PBXNativeTarget "GNUplotExample" */;
+			buildPhases = (
+				2D922B372C37A0A900C01801 /* Sources */,
+				2D922B382C37A0A900C01801 /* Frameworks */,
+				2D922B392C37A0A900C01801 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GNUplotExample;
+			productName = GNUplotExample;
+			productReference = 2D922B3B2C37A0A900C01801 /* GNUplotExample */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -279,6 +371,12 @@
 					2D922B202C3782DB00C01801 = {
 						CreatedOnToolsVersion = 16.0;
 					};
+					2D922B2D2C379F5F00C01801 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					2D922B3A2C37A0A900C01801 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = 2D922AE72C37694C00C01801 /* Build configuration list for PBXProject "ENSF-694Lab2" */;
@@ -299,6 +397,8 @@
 				2D922B062C3769F300C01801 /* part1ExerciseAMyCode */,
 				2D922B132C377BC200C01801 /* part1ExerciseB */,
 				2D922B202C3782DB00C01801 /* part1ExerciseC */,
+				2D922B2D2C379F5F00C01801 /* part1ExerciseD */,
+				2D922B3A2C37A0A900C01801 /* GNUplotExample */,
 			);
 		};
 /* End PBXProject section */
@@ -340,6 +440,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D922B292C3782F900C01801 /* lab2exe_C.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D922B2A2C379F5F00C01801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D922B362C379F7500C01801 /* fibonacci.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D922B372C37A0A900C01801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D922B432C37A0B700C01801 /* Gnuplot example.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +677,46 @@
 			};
 			name = Release;
 		};
+		2D922B332C379F5F00C01801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JZ4LMZQ3Z;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D922B342C379F5F00C01801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JZ4LMZQ3Z;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2D922B402C37A0A900C01801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JZ4LMZQ3Z;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D922B412C37A0A900C01801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JZ4LMZQ3Z;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -614,6 +770,24 @@
 			buildConfigurations = (
 				2D922B262C3782DB00C01801 /* Debug */,
 				2D922B272C3782DB00C01801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D922B322C379F5F00C01801 /* Build configuration list for PBXNativeTarget "part1ExerciseD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D922B332C379F5F00C01801 /* Debug */,
+				2D922B342C379F5F00C01801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D922B3F2C37A0A900C01801 /* Build configuration list for PBXNativeTarget "GNUplotExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D922B402C37A0A900C01801 /* Debug */,
+				2D922B412C37A0A900C01801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
