@@ -1,30 +1,38 @@
+/*
+ *  lab2exe_E.cpp
+ *  ENSF 694 Lab 2, exercise E
+ *  Completed by: Jaskirat Singh
+ *  Submission date: July 10
+ */
+
 #include "compare_sorts.h"
 using namespace std;
 
-void to_lower(char *str)
-{
+void to_lower(char *str) {
     while (*str) {
         *str = std::tolower(*str);
         ++str;
     }
 }
 
-void strip_punctuation(char *word)
-{
+void strip_punctuation(char *word) {
     int i = 0, j = 0;
+    //Loop till end of C string
     while (word[i] != '\0') {
-        if (std::isalnum(word[i]) || word[i] == '-') {
+        if (isalnum(word[i]) || word[i] == '-') {
             word[j++] = word[i];
         }
         i++;
     }
-    word[j] = '\0'; // Terminate the string
+    //End string to make into proper C-string
+    word[j] = '\0';
 }
 
 bool is_unique(char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int num_words, const char *word) {
-    for (int i = 0; i < num_words; i++) {
+    //Loop through all the words
+    for(int i = 0; i < num_words; i++) {
         // Word not unique
-        if (strcmp(words[i], word) == 0) {
+        if(strcmp(words[i], word) == 0) {
             return false;
         }
     }
@@ -33,68 +41,67 @@ bool is_unique(char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int num_words, const
 }
 
 void quicksort(int *indices, char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int left, int right) {
+    //Following algorithm shown in class
     if(left < right) {
-        int pivotIndex = indices[right];
-        char *pivot = words[pivotIndex];
+        int index = indices[right];
+        char *pivot = words[index];
         int i = left - 1;
 
-        for (int j = left; j < right; j++) {
-            if (strcmp(words[indices[j]], pivot) < 0) {
+        for(int j = left; j < right; j++) {
+            if(strcmp(words[indices[j]], pivot) < 0) {
                 i++;
-                // Swap indices[i] and indices[j]
+                //Swap
                 int temp = indices[i];
                 indices[i] = indices[j];
                 indices[j] = temp;
             }
         }
-        // Swap indices[i + 1] and indices[right]
+        //Swap
         int temp = indices[i + 1];
         indices[i + 1] = indices[right];
         indices[right] = temp;
 
-        int partitionIndex = i + 1;
-        quicksort(indices, words, left, partitionIndex - 1);
-        quicksort(indices, words, partitionIndex + 1, right);
+        int part = i + 1;
+        quicksort(indices, words, left, part - 1);
+        quicksort(indices, words, part + 1, right);
     }
 }
 
 void shellsort(int *indices, char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int size) {
-    // Start with a big gap, then reduce the gap
-    for (int gap = size / 2; gap > 0; gap /= 2) {
-        // Do a gapped insertion sort for this gap size.
+    //Reduce gap size after each iteration
+    for(int gap = size/2; gap > 0; gap/=2) {
+        //Iteratre throuugh
         for (int i = gap; i < size; i++) {
-            // Save indices[i] and the word it points to
             int temp = indices[i];
-            char *tempWord = words[temp];
+            char *tempw = words[temp];
             
-            // Shift earlier gap-sorted elements up until the correct location for indices[i] is found
             int j;
-            for (j = i; j >= gap && strcmp(words[indices[j - gap]], tempWord) > 0; j -= gap) {
+            for(j = i; j >= gap && strcmp(words[indices[j - gap]], tempw) > 0; j -= gap) {
                 indices[j] = indices[j - gap];
             }
             
-            // Put temp (the original indices[i]) in its correct location
             indices[j] = temp;
         }
     }
 }
 
-void bubblesort(int *indices, char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int size)
-{
-    bool swapped;
-    for (int i = 0; i < size - 1; i++) {
-        swapped = false;
-        for (int j = 0; j < size - i - 1; j++) {
-            if (strcmp(words[indices[j]], words[indices[j + 1]]) > 0) {
-                // Swap indices[j] and indices[j + 1]
+void bubblesort(int *indices, char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int size) {
+    //Following algorithm shown in class
+    bool isSwapped;
+    for(int i = 0; i < size - 1; i++) {
+        isSwapped = false;
+        for(int j = 0; j < size - i - 1; j++) {
+            if(strcmp(words[indices[j]], words[indices[j + 1]]) > 0) {
+                //swap
                 int temp = indices[j];
                 indices[j] = indices[j + 1];
                 indices[j + 1] = temp;
-                swapped = true;
+                //swap performed
+                isSwapped = true;
             }
         }
-        // If no elements were swapped, the array is already sorted
-        if (!swapped) {
+        //sorting complete when swapping is done
+        if(!isSwapped) {
             break;
         }
     }
@@ -137,7 +144,7 @@ void write_words(const char *output_file, char words[MAX_UNIQUE_WORDS][MAX_WORD_
 }
 
 void sort_and_measure_quicksort(char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int* indices, int num_words, void (*sort_func)(int *, char [MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int, int), const char *sort_name) {
-    //get start time
+    //Get start time
     auto start = chrono::high_resolution_clock::now();
 
     //Call sorting func
@@ -154,7 +161,7 @@ void sort_and_measure_quicksort(char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int
 }
 
 void sort_and_measure_shell_bubble(char words[MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int* indices, int num_words, void (*sort_func)(int *, char [MAX_UNIQUE_WORDS][MAX_WORD_SIZE], int), const char *sort_name) {
-    //get start time
+    //Get start time
     auto start = chrono::high_resolution_clock::now();
 
     //Call sorting func

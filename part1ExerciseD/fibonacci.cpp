@@ -15,7 +15,6 @@ using namespace std;
 
 
 void myPlot(int* x, double *y1, double *y2, int size){
-    //Function built with the help of "Gnuplot example.cpp" pprovided on D2L
     FILE * gnuplotPipe = popen ("/opt/homebrew/bin/gnuplot -persistent", "w");
     
     //Name for the plot
